@@ -1,0 +1,25 @@
+uniform mat4 model_view_matrix;
+
+uniform vec2 translation;
+uniform vec2 scale;
+uniform float rotation; //In degrees
+
+attribute vec4 vertex_position;
+attribute vec2 tex;
+
+varying vec2 tex_coord;
+
+void main()
+{
+        vec4 translation_vector = vec4(translation.x, translation.y, 0.0, 0.0);
+        //(rotation / 360.0) * 2.0 * 3.14
+        float r = rotation; //To radians. TODO more precise pi
+        
+        mat4 rotation_matrix = mat4(cos(r), -sin(r),	0.0, 0.0,
+			    					sin(r),  cos(r),	0.0, 0.0,
+			             			0.0,     0.0,		1.0, 0.0,
+				     				0.0,     0.0,	 	0.0, 1.0 );
+		
+        gl_Position = (rotation_matrix * (vec4(scale, 1.0, 1.0) * vertex_position) + translation_vector) * model_view_matrix;
+        tex_coord = tex;
+}

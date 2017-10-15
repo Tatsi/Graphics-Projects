@@ -4,7 +4,7 @@ Graphics programming related projects that I've done on my spare time and on sch
 
 # OpenGL 3D engine prototype
 
-TODO image
+![alt text](/images/engine.png "Screen shot of my OpenGL engine")
 
 This is a 3D engine for Windows that uses WIN32 API to create a window, rendering context and handle user input. It uses OpenGL 3.3 API to render 3D models and also includes simple collision detection. It uses Phong shading to shade the models.
 
@@ -18,7 +18,7 @@ The code of this project can be found in [this GitHub repo](https://github.com/T
 
 Here are some algoritms that I've developed in Computer graphics courses.
 
-## Bounding volume hiearchy
+## Bounding volume hierarchy
 
 ![alt text](/images/raytrace.png "Raytrace result of Sponza scene that uses my BVH algorithms")
 
@@ -27,9 +27,21 @@ is substantial. I also made the raytracing loop multithreaded to further acceler
 
 ## Ambient oclusion
 
+![alt text](/images/ao.png "Ambient oclusion result of a box scene")
 
+The code for my implementation of ambient oclusion is [here](/ao.cpp).
 
-## indirect lightning
+## Indirect lightning (not real time radiosity)
+
+![alt text](/images/indirect_lightning.png "The result of indirect lightning algorithm")
+
+The image shows the result of my radiosity algorithm after three bounces. In addition to total random sampling I implemented the algorithm with Quasi Monte Carlo sampling using Halton sequence. The relevant code is [here](/radiosity.cpp).
+
+## Other algorithms 
+
+I've also implemented for example instant radiosity (real time radiosity) algorithm, spotlight shading and shadow mapping. 
+
+On the basic Computer Graphics course I did all 16 assignments and the project work. The programming was done with Processing.
 
 # OpenGL physics game engine prototype for Android 
 
@@ -70,8 +82,7 @@ During my studies I applied to game development module that included game develo
 
 ## Cancer game
 
-As the project of game development module I was in another group that implemented a RTS game where human body fights cancer cells. In this game player controls different types of cells that 
-each have their own abilities. The different types of cells we had in the game are rendered below.
+As the project of game development module I was in another group that implemented a RTS game where human body fights cancer cells. In this game player controls different types of cells that each have their own abilities. The different types of cells we had in the game are rendered below.
 
 ![alt text](/images/cancer.png "Cell types in our cancer game")
 
@@ -86,7 +97,7 @@ pose. The game was developed with Unity and we had a RUIS framework in use to he
 
 Quickly done interactive application to test WebGL performance across different mobile devices. It uses [Three.js](https://threejs.org/) library to make scene
 setup easier. This was done for WWW Applications course to perform a benchmark on various mobile devices. The aim was to find out how well mobile browsers support
-WebGL and how well they perform. The source code can be found in [https://github.com/Tatsi/WebGLGame](GitHub repo).
+WebGL and how well they perform. The source code can be found in [this GitHub repo](https://github.com/Tatsi/WebGLGame).
 
 # Image processing
 
@@ -96,7 +107,7 @@ I've done a few small projects related to image processing. One of them was comp
 that shows Eizo displays gamut area in red, Samsungs displays gamut in blue and Adobe RGB in grey. I also calculated dE2000 values for both displays to compare their 
 precision. As results I got that Eizo can produce a wider area, approximately 97% of Adobe RGB color space, but Samsung displays colors more precisely.
 
-![alt text](/images/gamut.jpg "Adobe RGB, CG242W and 244BW gamuts")
+![alt text](/images/colorspace.png "Adobe RGB, CG242W and 244BW gamuts")
 
 ## Feature extraction methods in content based image retrieval
 

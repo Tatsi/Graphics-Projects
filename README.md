@@ -16,7 +16,7 @@ The code of this project can be found in [this GitHub repo](https://github.com/T
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=PknrvDZcKto
 " target="_blank"><img src="http://img.youtube.com/vi/PknrvDZcKto/0.jpg" 
-alt="Demo video" width="240" height="180" border="10" /></a>
+alt="Demo video" border="10" /></a>
 
 # Computer graphics algorithms
 

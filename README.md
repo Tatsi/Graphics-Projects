@@ -12,7 +12,11 @@ I did this program on my spare time in learning purposes. At first I was using G
 
 The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script.
 
-The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine).
+The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine). Short development testing video of the engine can be seen below.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PknrvDZcKto
+" target="_blank"><img src="http://img.youtube.com/vi/PknrvDZcKto/0.jpg" 
+alt="Demo video" width="240" height="180" border="10" /></a>
 
 # Computer graphics algorithms
 

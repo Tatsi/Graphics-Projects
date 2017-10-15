@@ -10,7 +10,7 @@ This is a 3D engine for Windows that uses WIN32 API to create a window, renderin
 
 I did this program on my spare time in learning purposes. At first I was using GLUT to do some graphics programming, but soon found it very limited and decided to build my own engine as I found great intrest in computer graphics and knew that this would be a very educational project. It is programmed in C++ and for development I used Visual studio IDE. I use GLSL for shaders and they are read from my shader files from Shaders directory. The used OpenGL version is 3.3.
 
-The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script.
+The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script. The engine also includes collision detection.
 
 The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine).
 

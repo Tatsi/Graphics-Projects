@@ -10,7 +10,7 @@ This is a 3D engine for Windows that uses WIN32 API to create a window, renderin
 
 I did this program on my spare time in learning purposes. At first I was using GLUT to do some graphics programming, but soon found it very limited and decided to build my own engine as I found great intrest in computer graphics and knew that this would be a very educational project. It is programmed in C++ and for development I used Visual studio IDE. I use GLSL for shaders and they are read from my shader files from Shaders directory. The used OpenGL version is 3.3.
 
-The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script. The engine also includes collision detection.
+The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script.
 
 The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine).
 
@@ -20,7 +20,7 @@ Here are some algoritms that I've developed in Computer graphics courses.
 
 ## Bounding volume hierarchy
 
-![alt text](/images/raytrace.png "Raytrace result of Sponza scene that uses my BVH algorithms")
+![alt text](/images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
 
 I've implemented a BVH acceleration structure to accelerate raytracing. When compared to basic ray-triangle intersection algorithm the performance improvement
 is substantial. I also made the raytracing loop multithreaded to further accelerate the raytracing loop. The relevant parts of the code are gathered in [this file](raycast.cpp). My implementation uses spatial median split to split the primitives.
@@ -31,7 +31,7 @@ is substantial. I also made the raytracing loop multithreaded to further acceler
 
 The code for my implementation of ambient oclusion is [here](/ao.cpp).
 
-## Indirect lightning (not real time radiosity)
+## Indirect lightning (non-realtime radiosity)
 
 ![alt text](/images/indirect_lightning.png "The result of indirect lightning algorithm")
 
@@ -39,7 +39,7 @@ The image shows the result of my radiosity algorithm after three bounces. In add
 
 ## Other algorithms 
 
-I've also implemented for example instant radiosity (real time radiosity) algorithm, spotlight shading and shadow mapping. 
+I've also implemented for example instant radiosity (real time radiosity) algorithm, spotlight shading, shadow mapping etc. 
 
 On the basic Computer Graphics course I did all 16 assignments and the project work. The programming was done with Processing.
 
@@ -78,7 +78,7 @@ I've made a few small unity projects at school and on my spare time.
 
 During my studies I applied to game development module that included game development projects in collaboration projects Aalto School of Arts. I was selected to work as a programmer in two unity games as one of the two programmers. One of these projects, called Lootgrabber, was a 2D platformer game for Android. The art were made by two Arts students and the audio by one Arts student. The Android package to run the game can be found [here](/lootgrabber.apk).
 
-![alt text](/images/lootgrabber.png "Lootgrabber Android game")
+![alt text](/images/lootgrabber1.png "Lootgrabber Android game")
 
 ## Cancer game
 

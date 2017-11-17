@@ -1,16 +1,16 @@
-# Graphics Projects
+# Game and graphics related projects
 
-Graphics programming related projects that I've done on my spare time and on school courses.
+Game and graphics related programming related projects that I've done on my spare time and on school courses.
 
 # OpenGL 3D engine prototype
 
-![alt text](/images/engine.png "Screen shot of my OpenGL engine")
+![alt text](/images/engine.png "Screenshot of my OpenGL game engine")
 
-This is a 3D engine for Windows that uses WIN32 API to create a window, rendering context and handle user input. It uses OpenGL 3.3 API to render 3D models and also includes simple collision detection. It uses Phong shading to shade the models.
+This is a 3D game engine for Windows that uses WIN32 API to create a window, rendering context and handle user input. It uses OpenGL 3.3 API to render 3D models and also includes simple collision detection. It uses Phong shading to shade the models.
 
 I did this program on my spare time in learning purposes. At first I was using GLUT to do some graphics programming, but soon found it very limited and decided to build my own engine as I found great intrest in computer graphics and knew that this would be a very educational project. It is programmed in C++ and for development I used Visual studio IDE. I use GLSL for shaders and they are read from my shader files from Shaders directory. The used OpenGL version is 3.3.
 
-The engine uses a custom model format which is a slightly modified version of common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script.
+The engine uses a custom model format which is a slightly modified version of the common ply format. The models can be done and textured in Autodesk 3DS Max and then exported to the used format with a customized script.
 
 The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine). Short development testing video of the engine can be seen below.
 
@@ -20,7 +20,7 @@ alt="Demo video" border="10" /></a>
 
 # Computer graphics algorithms
 
-Here are some algoritms that I've developed in Computer graphics courses.
+Here you can find some algoritms that I've developed in Computer graphics courses.
 
 ## Bounding volume hierarchy
 
@@ -86,14 +86,13 @@ During my studies I applied to game development module that included game develo
 
 ## Cancer game
 
-As the project of game development module I was in another group that implemented a RTS game where human body fights cancer cells. In this game player controls different types of cells that each have their own abilities. The different types of cells we had in the game are rendered below.
+As the project of game development module I was in another group that implemented a RTS game where human body fights cancer cells. In this game player controls different types of cells that each have their own abilities to defend the human from the cancer cells. The different types of cells we had in the game are rendered below.
 
 ![alt text](/images/cancer.png "Cell types in our cancer game")
 
 ## Virtual Reality game
 
-On Virtual Reality course me and two fellow students made a virtual reality game that was played on a dual 3D projector setup using Play station move props and Kinect. I was responsible for rendering, lightning, texturing and finding suitable models. Mostly I used pre made models, but modelled and textured some myself. The aim of the game was to progress through a level by shooting the zombies that appear on your path. A ray was drawn from the players weapon prop to the game scene to help players aim. The player was also able to pick up more ammo by crouching near ammo crates. This was implemented using a Kinect sensor that was tracking players 
-pose. The game was developed with Unity and we had a RUIS framework in use to help us integrate Move props and kinect into our game.
+On Virtual Reality course me and two fellow students made a virtual reality game that was played on a dual 3D projector setup using PlayStation Move props and Microsoft Kinect. I was responsible for rendering, lightning, texturing and finding suitable models. Mostly I used pre made models, but modelled and textured some myself. The aim of the game was to progress through a level by shooting the zombies that appear on your path. A ray is drawn from the players weapon prop to the game scene to help players aim. The player was also able to pick up more ammo by crouching near ammo crates. This was implemented using a Kinect sensor that was tracking players pose. The game was developed with Unity and we had a RUIS framework in use to help us integrate Move props and kinect into our game.
 
 ![alt text](/images/vr.jpg "Our VR application in use")
 

@@ -4,7 +4,7 @@ Game and graphics related programming related projects that I've done on my spar
 
 # OpenGL 3D engine prototype
 
-![alt text](/images/engine.png "Screenshot of my OpenGL game engine")
+![alt text](images/engine.png "Screenshot of my OpenGL game engine")
 
 This is a 3D game engine for Windows that uses WIN32 API to create a window, rendering context and handle user input. It uses OpenGL 3.3 API to render 3D models and also includes simple collision detection. It uses Phong shading to shade the models.
 
@@ -24,7 +24,7 @@ Here you can find some algoritms that I've developed in Computer graphics course
 
 ## Bounding volume hierarchy
 
-![alt text](/images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
+![alt text](images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
 
 I've implemented a BVH acceleration structure to accelerate raytracing. When compared to basic ray-triangle intersection algorithm the performance improvement
 is substantial. I also made the raytracing loop multithreaded to further accelerate the raytracing loop. The relevant parts of the code are gathered in [this file](raycast.cpp). My implementation uses spatial median split to split the primitives.

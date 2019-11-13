@@ -1,6 +1,49 @@
 # Game and graphics related projects
 
-Game and graphics related programming related projects that I've done on my spare time and on school courses.
+Game and computer graphics related programming related work and projects that I've done at work, on my spare time and on school courses.
+
+I have professional experience of working with Vulkan, OpenGL, OpenGL ES and Metal graphics APIs. 
+
+# Computer graphics algorithms
+
+Here you can find some algoritms that I've developed or worked with. I have worked both with rasterization 
+and raytracing based algorithms.
+
+## Shadow mapping
+
+I've implemented shadow mapping related algorithms for Basemarks Rocksolid rendering engine.
+
+## Reflection models and BRDF's
+
+I have experience of using and implementing Cook-Torrance, Phong and Oren-Nayar reflection models.
+
+## Bounding volume hierarchy
+
+![alt text](images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
+
+I've implemented a BVH acceleration structure to accelerate offline raytracing. When compared to basic ray-triangle intersection algorithm the performance improvement is enormous. I also made the raytracing loop multithreaded to further accelerate the raytracing loop. The relevant parts of the code are gathered in [this file](raycast.cpp). My implementation uses spatial median split method to split the sets of primitives.
+
+## Ambient oclusion
+
+![alt text](/images/ao.png "Ambient oclusion result of a box scene")
+
+The code for my implementation of ray-traced ambient oclusion is [here](/ao.cpp).
+
+## Indirect lightning (non-realtime radiosity)
+
+![alt text](/images/indirect_lightning.png "The result of indirect lightning algorithm")
+
+The image shows the result of my radiosity algorithm after three bounces. In addition to total random sampling I implemented the algorithm with Quasi Monte Carlo sampling using Halton sequence. The relevant code is [here](/radiosity.cpp).
+
+## Other algorithms 
+
+I've also implemented for example instant radiosity (real time radiosity) algorithm, mesh level of detail system, panini projection etc. 
+
+# Masters thesis
+
+In 2018 I finished my masters thesis that described a realtime method for capturing environment lighting information on mobile devices. My thesis 
+also presented how this information can be prepaired for use in physically based realtime rendering. The method was aimed to improve the realism 
+of augmented reality mobile applications.
 
 # OpenGL 3D engine prototype
 
@@ -14,43 +57,9 @@ The engine uses a custom model format which is a slightly modified version of th
 
 The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine). Short development testing video of the engine can be seen below.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=PknrvDZcKto
-" target="_blank"><img src="http://img.youtube.com/vi/PknrvDZcKto/0.jpg" 
-alt="Demo video" border="10" /></a>
-
-# Computer graphics algorithms
-
-Here you can find some algoritms that I've developed in Computer graphics courses.
-
-## Bounding volume hierarchy
-
-![alt text](images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
-
-I've implemented a BVH acceleration structure to accelerate raytracing. When compared to basic ray-triangle intersection algorithm the performance improvement
-is substantial. I also made the raytracing loop multithreaded to further accelerate the raytracing loop. The relevant parts of the code are gathered in [this file](raycast.cpp). My implementation uses spatial median split to split the primitives.
-
-## Ambient oclusion
-
-![alt text](/images/ao.png "Ambient oclusion result of a box scene")
-
-The code for my implementation of ambient oclusion is [here](/ao.cpp).
-
-## Indirect lightning (non-realtime radiosity)
-
-![alt text](/images/indirect_lightning.png "The result of indirect lightning algorithm")
-
-The image shows the result of my radiosity algorithm after three bounces. In addition to total random sampling I implemented the algorithm with Quasi Monte Carlo sampling using Halton sequence. The relevant code is [here](/radiosity.cpp).
-
-## Other algorithms 
-
-I've also implemented for example instant radiosity (real time radiosity) algorithm, spotlight shading, shadow mapping etc. 
-
-On the basic Computer Graphics course I did all 16 assignments and the project work. The programming was done with Processing.
-
 # OpenGL physics game engine prototype for Android 
 
-I was intrested what it's like to create an OpenGL rendering engine for Android. As a test program I created an Android application that uses Android framework 
-to create an application that uses OpenGL ES API to perform rendering. I also included `box2d` physics library to make a simple physics base game engine 
+I was intrested what it's like to create an OpenGL rendering engine for mobile devices. As a test program I created an Android application that uses the Android framework to create an application that uses OpenGL ES API to perform rendering. I also included `box2d` physics library to make a simple physics base game engine 
 prototype. Before I started with Android I made a test program with C++, OpenGL and box2d.
 
 In this prototype user can move and rotate different shaped 2D objects and when he presses a button marbles are released and roll down screen and collision with 
@@ -60,7 +69,7 @@ The code of this program can be found [here](/fluids).
 
 # Computer Animation
 
-For Computer Animation course I was provided with large data set of motion capture data in [BVH format](https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html). The goal was to implement different animation and physics algorithms by using this data as the base. Programming was done with [Processing](https://processing.org/). For a single task several methods were implemented to illustrate their benefits and pitfalls. The functions that I implemented include:
+For Aalto Universitys Computer Animation course I was provided with large data set of motion capture data in [BVH format](https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html). The goal was to implement different animation and physics algorithms by using this data as the base. Programming was done with [Processing](https://processing.org/). For a single task several methods were implemented to illustrate their benefits and pitfalls. The functions that I implemented include:
 
 * BVH parser and showing the motion on a skeleton
 * Linear interpolation and linear interpolation of Euler angles of coordinates
@@ -106,8 +115,7 @@ WebGL and how well they perform. The source code can be found in [this GitHub re
 
 ## Color production capabilities of displays
 
-I've done a few small projects related to image processing. One of them was comparison of two displays color producing abilities. These displays were Eizo ColorEdge CG242W ja Samsung SyncMaster 2443BW. Both of them were profiled to use Adobe RGB color space. I calculated the gamuts of both displays in Matlab and drew an image 
-that shows Eizo displays gamut area in red, Samsungs displays gamut in blue and Adobe RGB in grey. I also calculated dE2000 values for both displays to compare their 
+I've done a few small projects related to image processing. One of them was comparison of two displays color producing abilities. These displays were Eizo ColorEdge CG242W ja Samsung SyncMaster 2443BW. Both of them were profiled to use Adobe RGB color space. I calculated the gamuts of both displays in Matlab and drew an image that shows Eizo displays gamut area in red, Samsungs displays gamut in blue and Adobe RGB in grey. I also calculated dE2000 values for both displays to compare their 
 precision. As results I got that Eizo can produce a wider area, approximately 97% of Adobe RGB color space, but Samsung displays colors more precisely.
 
 ![alt text](/images/colorspace.png "Adobe RGB, CG242W and 244BW gamuts")

@@ -1,51 +1,104 @@
-# Game and graphics related projects
+# Shipped public products
 
-Game and computer graphics related programming related work and projects that I've done at work, on my spare time and on school courses.
+## GPUScore: The Expedition
 
-I have professional experience of working with Vulkan, OpenGL, OpenGL ES and Metal graphics APIs. 
+![alt text](images/benchmarks/expedition.png "The Expedition")
 
-# Computer graphics algorithms
+Mobile benchmark, available for iOS and Android. I worked as the Technical lead and as a graphics engineer.
 
-Here you can find some algoritms that I've developed or worked with. I have worked both with rasterization 
-and raytracing based algorithms.
+## GPUScore: Relic of Life
 
-## Shadow mapping
+![alt text](images/benchmarks/rol.png "Relic of Life")
 
-I've implemented shadow mapping related algorithms for Basemarks Rocksolid rendering engine.
+Desktop raytracing benchmark, available for Windows and Linux. Windows versions supports both DirectX 12 and Vulkan, while Linux versions only support Vulkan. I worked as the Technical lead and as a graphics engineer.
 
-## Reflection models and BRDF's
+## GPUScore: Sacred Path
 
-I have experience of using and implementing Cook-Torrance, Phong and Oren-Nayar reflection models.
+![alt text](images/benchmarks/sp.png "Sacred Path")
 
-## Bounding volume hierarchy
+Cross-platform graphics benchmark, available for Windows/Linux/macOS/Android/iOS. Windows versions support both DirectX 12 and Vulkan, while Linux/Android versions only support Vulkan and iOS/macOS versions only support Metal. I worked as the Technical lead and as a graphics engineer.
+
+## GPUScore: In Vitro
+
+![alt text](images/benchmarks/iv.png "In Vitro")
+
+Mobile raytracing benchmark, available as free/corporate version on Android. Utilizes raytraced reflections, Ground-Truth Ambient Occlusion (GTAO) in addition to other rendering effects. I worked as the Technical lead and as a graphics engineer.
+
+## GPUScore: Breaking Limit
+
+![alt text](images/benchmarks/bl.png "Breaking Limit")
+
+Cross-platform raytracing benchmark, available for Windows/Linux/Android/iOS/macOS. Utilizes raytraced reflections, shadows and global illumination in addition to other rendering effects. I worked as the Technical lead and as a graphics engineer.
+
+
+# Graphics related work
+
+I have professional experience of working with Vulkan, DirectX 12, OpenGL (ES) and Metal graphics APIs. I specialize in rendering algorithms and shading.
+
+## Real-time raytracing
+
+I added raytracing support to a proprietary rendering engine using rayqueries and raytracing pipelines.
+
+### Raytraced reflections
+
+![alt text](images/benchmarks/reflections.png "Raytraced reflections")
+
+I implemented real-time hardware accelerated raytracing to a proprietary rendering engine. Denoising is done using FidelityFX reflections denoiser.
+
+### Raytraced shadows
+
+![alt text](images/benchmarks/shadows.png "Raytraced shadows")
+
+I implemented real-time hardware accelerated raytracing to a proprietary rendering engine. Denoising is done using FidelityFX shadows denoiser.
+
+### Raytraced global illumination
+
+![alt text](images/benchmarks/gi.png "Raytraced GI")
+
+I integrated raytraced global illumination algorithm to a proprietary rendering engine using NVIDIA RTXGI SDK.
+
+## Reflection models, BRDF's and shading
+
+I have experience of using and implementing Cook-Torrance, Phong and Oren-Nayar reflection models. I have deep understanding of physically based rendering (PBR) and image based lighting (IBL).
+
+## Custom material system and support for special materials
+
+I implemented a custom material system to a proprietary rendering engine and added built-in support for special materials such as clearcoat.
+
+![alt text](images/benchmarks/clearcoat.png "clearcoat")
+
+## Other algorithms 
+
+I've also implemented for example instant radiosity (real time radiosity) algorithm, CMAA2 antialiasing, image based lighting probe system, shadow mapping, panini projection etc. 
+
+# Masters thesis
+
+In 2018 I finished my masters thesis that described a realtime method for capturing environment lighting information on mobile devices. My thesis also presented how this information can be prepaired for use in physically based realtime rendering. The method was aimed to improve the realism of augmented reality mobile applications.
+
+
+# Old projects
+
+## Offline raytracer
+
+### Bounding volume hierarchy
 
 ![alt text](images/raytrace.png "Raytrace result of Sponza scene that uses BVH algorithms")
 
 I've implemented a BVH acceleration structure to accelerate offline raytracing. When compared to basic ray-triangle intersection algorithm the performance improvement is enormous. I also made the raytracing loop multithreaded to further accelerate the raytracing loop. The relevant parts of the code are gathered in [this file](raycast.cpp). My implementation uses spatial median split method to split the sets of primitives.
 
-## Ambient oclusion
+### Ambient oclusion
 
 ![alt text](/images/ao.png "Ambient oclusion result of a box scene")
 
 The code for my implementation of ray-traced ambient oclusion is [here](/ao.cpp).
 
-## Indirect lightning (non-realtime radiosity)
+### Indirect lightning (non-realtime radiosity)
 
 ![alt text](/images/indirect_lightning.png "The result of indirect lightning algorithm")
 
 The image shows the result of my radiosity algorithm after three bounces. In addition to total random sampling I implemented the algorithm with Quasi Monte Carlo sampling using Halton sequence. The relevant code is [here](/radiosity.cpp).
 
-## Other algorithms 
-
-I've also implemented for example instant radiosity (real time radiosity) algorithm, mesh level of detail system, panini projection etc. 
-
-# Masters thesis
-
-In 2018 I finished my masters thesis that described a realtime method for capturing environment lighting information on mobile devices. My thesis 
-also presented how this information can be prepaired for use in physically based realtime rendering. The method was aimed to improve the realism 
-of augmented reality mobile applications.
-
-# OpenGL 3D engine prototype
+## OpenGL 3D engine prototype
 
 ![alt text](images/engine.png "Screenshot of my OpenGL game engine")
 
@@ -57,7 +110,7 @@ The engine uses a custom model format which is a slightly modified version of th
 
 The code of this project can be found in [this GitHub repo](https://github.com/Tatsi/OpenGL3DEngine). Short development testing video of the engine can be seen below.
 
-# OpenGL physics game engine prototype for Android 
+## OpenGL physics game engine prototype for Android 
 
 I was intrested what it's like to create an OpenGL rendering engine for mobile devices. As a test program I created an Android application that uses the Android framework to create an application that uses OpenGL ES API to perform rendering. I also included `box2d` physics library to make a simple physics base game engine 
 prototype. Before I started with Android I made a test program with C++, OpenGL and box2d.
@@ -67,7 +120,7 @@ the user placed objects. The idea was to create a game where user has to direct 
 
 The code of this program can be found [here](/fluids).
 
-# Computer Animation
+## Computer Animation
 
 For Aalto Universitys Computer Animation course I was provided with large data set of motion capture data in [BVH format](https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html). The goal was to implement different animation and physics algorithms by using this data as the base. Programming was done with [Processing](https://processing.org/). For a single task several methods were implemented to illustrate their benefits and pitfalls. The functions that I implemented include:
 
@@ -81,11 +134,11 @@ lengths. With this algorithm it was possible to for example transform the origin
 
 The ragdoll part of the code can be found [here](/ragdoll).
 
-# Unity projects
+## Unity projects
 
 I've made a few small unity projects at school and on my spare time. 
 
-## Lootgrabber game
+### Lootgrabber game
 
 ![alt text](/images/lootgrabber2.png "Lootgrabber Android game")
 
@@ -93,34 +146,34 @@ During my studies I applied to game development module that included game develo
 
 ![alt text](/images/lootgrabber1.png "Lootgrabber Android game")
 
-## Cancer game
+### Cancer game
 
 As the project of game development module I was in another group that implemented a RTS game where human body fights cancer cells. In this game player controls different types of cells that each have their own abilities to defend the human from the cancer cells. The different types of cells we had in the game are rendered below.
 
 ![alt text](/images/cancer.png "Cell types in our cancer game")
 
-## Virtual Reality game
+### Virtual Reality game
 
 On Virtual Reality course me and two fellow students made a virtual reality game that was played on a dual 3D projector setup using PlayStation Move props and Microsoft Kinect. I was responsible for rendering, lightning, texturing and finding suitable models. Mostly I used pre made models, but modelled and textured some myself. The aim of the game was to progress through a level by shooting the zombies that appear on your path. A ray is drawn from the players weapon prop to the game scene to help players aim. The player was also able to pick up more ammo by crouching near ammo crates. This was implemented using a Kinect sensor that was tracking players pose. The game was developed with Unity and we had a RUIS framework in use to help us integrate Move props and kinect into our game.
 
 ![alt text](/images/vr.jpg "Our VR application in use")
 
-# WebGL test game
+## WebGL test game
 
 Quickly done interactive application to test WebGL performance across different mobile devices. It uses [Three.js](https://threejs.org/) library to make scene
 setup easier. This was done for WWW Applications course to perform a benchmark on various mobile devices. The aim was to find out how well mobile browsers support
 WebGL and how well they perform. The source code can be found in [this GitHub repo](https://github.com/Tatsi/WebGLGame).
 
-# Image processing
+## Image processing
 
-## Color production capabilities of displays
+### Color production capabilities of displays
 
 I've done a few small projects related to image processing. One of them was comparison of two displays color producing abilities. These displays were Eizo ColorEdge CG242W ja Samsung SyncMaster 2443BW. Both of them were profiled to use Adobe RGB color space. I calculated the gamuts of both displays in Matlab and drew an image that shows Eizo displays gamut area in red, Samsungs displays gamut in blue and Adobe RGB in grey. I also calculated dE2000 values for both displays to compare their 
 precision. As results I got that Eizo can produce a wider area, approximately 97% of Adobe RGB color space, but Samsung displays colors more precisely.
 
 ![alt text](/images/colorspace.png "Adobe RGB, CG242W and 244BW gamuts")
 
-## Feature extraction methods in content based image retrieval
+### Feature extraction methods in content based image retrieval
 
 I have also made a Matlab test program that compares the usability of different feature extraction methods in content based image retrieval. I used both local and global features and compared them. In my tests I used 300 training pictures and 100 test pictures. Features were extracted from training pictures and the test pictures were used to perform content based image retrieval. Mehods that I used in my tests were:
 
